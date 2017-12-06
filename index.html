@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Train Scheduler</title>
+    <!-- stylesheets from cdns -->
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bulma for a design framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+    <!-- local stylesheets -->
+    <link rel="stylesheet" href="css/stickyFooter.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="hero is-small is-warning is-bold">
+        <!-- Hero header: will stick at the top -->
+        <div class="hero-head">
+            <header class="nav">
+                <div class="container">
+                    <div class="nav-left">
+                        <span class="nav-item">
+                            <img src="https://pbs.twimg.com/profile_images/730750973/train-logo.gif" alt="Logo">
+                        </span>
+                    </div>
+                    <div class="nav-right nav-menu">
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-1">
+                    Train Scheduler
+                </h1>
+                <p class="subtitle is-4">
+                    Input train routes and frequencies, see arrival times!
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="hero is-dark">
+        <div class="hero-body">
+            <div class="container">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            Current Train Schedule
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <table class="table is-bordered is-striped is-fullwidth">
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency (min)</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>Orient Express</td>
+                                <td>Beijing</td>
+                                <td>3000</td>
+                                <td>3:15pm</td>
+                                <td>25:00</td>
+                            </tr>
+                            <tr>
+                                <td>Alpine Railway</td>
+                                <td>Vienna</td>
+                                <td>28</td>
+                                <td>3:05pm</td>
+                                <td>10:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero is-warning">
+        <div class="hero-body">
+            <div class="container">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            Add Train
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="field">
+                            <label class="label">Train Name</label>
+                            <div class="control">
+                                <input class="input" id="trainName" type="text" placeholder="e.g LA Hyperloop">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Destination</label>
+                            <div class="control">
+                                <input class="input" id="destination" type="text" placeholder="e.g. NYC, NY">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">First Train Time (HH:mm, military time)</label>
+                            <div class="control">
+                                <input class="input" id="firstTrainTime" type="text" placeholder="11:21">
+                            </div>
+                            <p class="help">Your time in 12-hour time: <span id="twelveHourTime"></span></p>
+                        </div>
+                        <div class="field">
+                            <label class="label">Frequency (in minutes)</label>
+                            <div class="control">
+                                <input class="input" id="frequency" type="number" placeholder="45">
+                            </div>
+                        </div>
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <input class="button is-dark" id="submit" type="submit" value="Submit">
+                            </div>
+                            <div class="control">
+                                <button class="button is-link">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero is-warning">
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p id="copyright"></p>
+        </div>
+    </footer>
+    <!-- load JS at end of file -->
+    <!-- first: javascript libraries from cdns -->
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Moment JS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Google Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <!-- second: local javascript -->
+    <script src="js/app.js"></script>
+    <script src="js/copyright.js"></script>
+</body>
+
+</html>

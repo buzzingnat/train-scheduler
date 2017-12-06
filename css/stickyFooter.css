@@ -1,0 +1,19 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.siteContent {
+  flex: 1;
+}
+footer.footer {
+  text-align: center;
+  padding: 25px;
+  line-height: 1em;
+}
+footer p {
+  margin: 0;
+}
